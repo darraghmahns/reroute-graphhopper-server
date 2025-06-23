@@ -33,9 +33,3 @@ server:
     - type: http
       port: 8990
       bind_host: 0.0.0.0
-
-web:
-  cors:
-    allowed_origins: ["*"]
-    allowed_methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
-    allowed_headers: ["*"]
