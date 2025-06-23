@@ -1,7 +1,7 @@
 graphhopper:
   datareader.file: us-west-latest.osm.pbf
   graph.location: /app/graph-cache
-  graph.vehicles: bike,bike2,bike3
+  graph.vehicles: bike
   import.osm.ignored_highways: track,service,footway,steps,pedestrian,platform,construction,bridleway
 
   profiles:
@@ -9,19 +9,19 @@ graphhopper:
       vehicle: bike
       weighting: fastest
       turn_costs: false
-      custom_model_files: [bike.yml]
-      
+      custom_model_file: bike.yml
+
     - name: gravel
-      vehicle: bike2  
+      vehicle: bike
       weighting: fastest
       turn_costs: false
-      custom_model_files: [gravel.yml]
-      
+      custom_model_file: gravel.yml
+
     - name: mountain
-      vehicle: bike3
-      weighting: fastest  
+      vehicle: bike
+      weighting: fastest
       turn_costs: false
-      custom_model_files: [mountain.yml]
+      custom_model_file: mountain.yml
 
   profiles_ch:
     - profile: bike
