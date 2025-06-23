@@ -15,6 +15,14 @@
     {
       "if": "road_class == RESIDENTIAL",
       "multiply_by": 0.9
+    },
+    {
+      "if": "surface == PAVED",
+      "multiply_by": 1.1
+    },
+    {
+      "if": "surface == UNPAVED",
+      "multiply_by": 0.3
     }
   ],
   "priority": [
