@@ -19,9 +19,9 @@ RUN mkdir -p /app/config
 
 # Copy configuration files
 COPY config.yml /app/config/
-COPY bike.yml /app/config/
-COPY gravel.yml /app/config/
-COPY mountain.yml /app/config/
+COPY bike.json /app/config/
+COPY gravel.json /app/config/
+COPY mountain.json /app/config/
 
 # Expose port
 EXPOSE 8989

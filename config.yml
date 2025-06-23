@@ -9,19 +9,19 @@ graphhopper:
       vehicle: bike
       weighting: custom
       turn_costs: false
-      custom_model_files: [bike.yml]
+      custom_model_files: [bike.json]
 
     - name: gravel
       vehicle: bike
       weighting: custom
       turn_costs: false
-      custom_model_files: [gravel.yml]
+      custom_model_files: [gravel.json]
 
     - name: mountain
       vehicle: bike
       weighting: custom
       turn_costs: false
-      custom_model_files: [mountain.yml]
+      custom_model_files: [mountain.json]
 
   profiles_ch:
     - profile: bike
