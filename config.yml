@@ -1,0 +1,41 @@
+graphhopper:
+  datareader.file: us-west-latest.osm.pbf
+  graph.location: /app/graph-cache
+  graph.flag_encoders: bike,bike2,bike3
+  prepare.ch.weightings: fastest
+  prepare.lm.weightings: fastest
+  
+  profiles:
+    - name: bike
+      vehicle: bike
+      weighting: fastest
+      turn_costs: false
+      custom_model_files: [bike.yml]
+      
+    - name: gravel
+      vehicle: bike2  
+      weighting: fastest
+      turn_costs: false
+      custom_model_files: [gravel.yml]
+      
+    - name: mountain
+      vehicle: bike3
+      weighting: fastest  
+      turn_costs: false
+      custom_model_files: [mountain.yml]
+
+server:
+  application_connectors:
+    - type: http
+      port: 8989
+      bind_host: 0.0.0.0
+  admin_connectors:
+    - type: http
+      port: 8990
+      bind_host: 0.0.0.0
+
+web:
+  cors:
+    allowed_origins: ["*"]
+    allowed_methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    allowed_headers: ["*"]
