@@ -7,19 +7,19 @@ graphhopper:
   profiles:
     - name: bike
       vehicle: bike
-      weighting: fastest
+      weighting: custom
       turn_costs: false
       custom_model_file: bike.yml
 
     - name: gravel
       vehicle: bike
-      weighting: fastest
+      weighting: custom
       turn_costs: false
       custom_model_file: gravel.yml
 
     - name: mountain
       vehicle: bike
-      weighting: fastest
+      weighting: custom
       turn_costs: false
       custom_model_file: mountain.yml
 
