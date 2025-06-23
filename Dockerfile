@@ -31,4 +31,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
   CMD curl -f http://localhost:8989/health || exit 1
 
 # Start GraphHopper
-CMD ["java", "-Xmx2g", "-jar", "graphhopper-web-8.0.jar", "-c", "config/config.yml"]
+CMD ["java", "-Xmx2g", "-jar", "graphhopper-web-8.0.jar", "server", "config/config.yml"]
