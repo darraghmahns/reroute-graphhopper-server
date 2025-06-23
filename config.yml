@@ -1,10 +1,8 @@
 graphhopper:
   datareader.file: us-west-latest.osm.pbf
   graph.location: /app/graph-cache
-  graph.flag_encoders: bike,bike2,bike3
-  prepare.ch.weightings: fastest
-  prepare.lm.weightings: fastest
-  
+  graph.vehicles: bike,bike2,bike3
+
   profiles:
     - name: bike
       vehicle: bike
@@ -23,6 +21,11 @@ graphhopper:
       weighting: fastest  
       turn_costs: false
       custom_model_files: [mountain.yml]
+
+  profiles_ch:
+    - profile: bike
+    - profile: gravel
+    - profile: mountain
 
 server:
   application_connectors:
