@@ -23,14 +23,6 @@
   ],
   "priority": [
     {
-      "if": "surface == GRAVEL",
-      "multiply_by": 2.0
-    },
-    {
-      "if": "surface == DIRT",
-      "multiply_by": 1.8
-    },
-    {
       "if": "road_class == TRACK",
       "multiply_by": 1.5
     },
