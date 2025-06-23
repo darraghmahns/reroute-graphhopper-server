@@ -2,7 +2,7 @@ graphhopper:
   datareader.file: us-west-latest.osm.pbf
   graph.location: /app/graph-cache
   graph.vehicles: bike,bike2,bike3
-  import.osm.ignored_highways: track,service,footway,cycleway,path,steps,pedestrian,platform,construction,bridleway
+  import.osm.ignored_highways: track,service,footway,steps,pedestrian,platform,construction,bridleway
 
   profiles:
     - name: bike
