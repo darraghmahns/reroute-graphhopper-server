@@ -2,7 +2,7 @@ graphhopper:
   datareader.file: us-west-latest.osm.pbf
   graph.location: /app/graph-cache
   graph.vehicles: bike
-  graph.encoded_values: surface,road_class,road_environment,mtb_scale
+  graph.encoded_values: surface,road_class,road_environment,mtb_rating
   import.osm.ignored_highways: track,service,footway,steps,pedestrian,platform,construction,bridleway
 
   profiles:
