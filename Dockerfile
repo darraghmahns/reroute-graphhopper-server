@@ -17,6 +17,9 @@ RUN wget https://download.geofabrik.de/north-america/us/montana-latest.osm.pbf
 # Create config directory
 RUN mkdir -p /app/config
 
+# Create elevation cache directory
+RUN mkdir -p /app/elevation-cache
+
 # Copy configuration files
 COPY config.yml /app/config/
 COPY bike.json /app/

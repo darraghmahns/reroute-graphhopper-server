@@ -4,6 +4,8 @@ graphhopper:
   graph.vehicles: bike
   graph.encoded_values: surface,road_class,road_environment,mtb_rating
   import.osm.ignored_highways: track,service,footway,steps,pedestrian,platform,construction,bridleway
+  graph.elevation.provider: srtm
+  graph.elevation.cache_dir: /app/elevation-cache
 
   profiles:
     - name: bike
