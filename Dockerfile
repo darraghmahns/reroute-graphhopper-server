@@ -12,7 +12,7 @@ WORKDIR /app
 
 # Download GraphHopper
 RUN wget https://github.com/graphhopper/graphhopper/releases/download/8.0/graphhopper-web-8.0.jar
-RUN wget https://download.geofabrik.de/north-america/us-west-latest.osm.pbf
+RUN wget https://download.geofabrik.de/north-america/us/montana-latest.osm.pbf
 
 # Create config directory
 RUN mkdir -p /app/config
@@ -31,4 +31,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
   CMD curl -f http://localhost:8989/health || exit 1
 
 # Start GraphHopper
-CMD ["java", "-Xmx2g", "-jar", "graphhopper-web-8.0.jar", "server", "config/config.yml"]
+CMD ["java", "-Xmx1.5g", "-jar", "graphhopper-web-8.0.jar", "server", "config/config.yml"]
