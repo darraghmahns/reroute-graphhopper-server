@@ -3,7 +3,7 @@ graphhopper:
   graph.location: /app/graph-cache
   graph.vehicles: bike
   graph.encoded_values: surface,road_class,road_environment,mtb_rating
-  import.osm.ignored_highways: track,service,footway,steps,pedestrian,platform,construction,bridleway
+  import.osm.ignored_highways: service,steps,pedestrian,platform,construction
   graph.elevation.provider: srtm
   graph.elevation.cache_dir: /app/elevation-cache
 
