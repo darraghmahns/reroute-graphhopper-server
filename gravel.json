@@ -14,57 +14,41 @@
     },
     {
       "if": "road_class == TRACK",
-      "multiply_by": 1.2
-    },
-    {
-      "if": "road_class == PATH",
       "multiply_by": 1.1
     },
     {
-      "if": "road_class == PRIMARY",
-      "multiply_by": 0.5
+      "if": "road_class == PATH",
+      "multiply_by": 0.8
     },
     {
-      "if": "road_class == SECONDARY",
-      "multiply_by": 0.5
-    },
-    {
-      "if": "road_class == TRUNK",
-      "multiply_by": 0.2
-    },
-    {
-      "if": "road_class == MOTORWAY",
-      "multiply_by": 0.1
+      "if": "mtb_rating >= 2",
+      "multiply_by": 0.05
     }
   ],
   "priority": [
     {
-      "if": "road_class == TRACK",
+      "if": "surface == GRAVEL",
+      "multiply_by": 2.0
+    },
+    {
+      "if": "surface == DIRT",
       "multiply_by": 1.5
     },
     {
+      "if": "surface == PAVED",
+      "multiply_by": 1.0
+    },
+    {
+      "if": "road_class == TRACK",
+      "multiply_by": 1.2
+    },
+    {
       "if": "road_class == PATH",
-      "multiply_by": 1.3
+      "multiply_by": 0.8
     },
     {
-      "if": "road_class == PRIMARY",
-      "multiply_by": 0.2
-    },
-    {
-      "if": "road_class == SECONDARY",
-      "multiply_by": 0.2
-    },
-    {
-      "if": "road_class == TRUNK",
+      "if": "mtb_rating >= 2",
       "multiply_by": 0.05
-    },
-    {
-      "if": "road_class == MOTORWAY",
-      "multiply_by": 0.01
-    },
-    {
-      "if": "road_environment == TUNNEL",
-      "multiply_by": 0.3
     }
   ]
 } 
