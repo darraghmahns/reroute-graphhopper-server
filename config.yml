@@ -14,10 +14,6 @@ graphhopper:
   prepare.min_network_size: 200
   prepare.min_one_way_network_size: 200
   
-  # Routing engine settings
-  routing.ch.disabling_allowed: true
-  routing.lm.disabling_allowed: true
-  
   # Web interface settings
   web.change_graph.enabled: false
   
