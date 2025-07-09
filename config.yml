@@ -2,12 +2,15 @@
 # Optimized for highway-free, scenic cycling with strict surface controls
 
 graphhopper:
-  graph.flag_encoders: bike,gravel,mountain
+  graph.vehicles: bike,gravel,mountain
   graph.location: graph-cache
   
   # Enhanced data sources for better routing
   datareader.file: montana-latest.osm.pbf
   datareader.date_range_parser_day: yyyy-MM-dd
+  
+  # OSM import optimizations
+  import.osm.ignored_highways: motorway,motorway_link,trunk,trunk_link
   
   # Improved graph preprocessing
   graph.encoded_values: road_class,road_class_link,road_environment,max_speed,road_access,surface,smoothness,bike_network,hike_rating
