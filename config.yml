@@ -1,48 +1,49 @@
 # GraphHopper Configuration for Montana Cycling Routes
 # Optimized for highway-free, scenic cycling with strict surface controls
 
-graph.flag_encoders: bike,gravel,mountain
-graph.location: graph-cache
-
-# Enhanced data sources for better routing
-datareader.file: montana-latest.osm.pbf
-datareader.date_range_parser_day: yyyy-MM-dd
-
-# Improved graph preprocessing
-graph.encoded_values: road_class,road_class_link,road_environment,max_speed,road_access,surface,smoothness,bike_network,hike_rating
-prepare.min_network_size: 200
-prepare.min_one_way_network_size: 200
-
-# Routing engine settings
-routing.ch.disabling_allowed: true
-routing.lm.disabling_allowed: true
-
-# Web interface settings
-web.change_graph.enabled: false
-
-# Strict surface and road class blocking for bike profile
-profiles:
-  - name: bike
-    vehicle: bike
-    weighting: custom
-    custom_model_files: [bike.json]
-    
-  - name: gravel
-    vehicle: bike
-    weighting: custom
-    custom_model_files: [gravel.json]
-    
-  - name: mountain
-    vehicle: bike
-    weighting: custom
-    custom_model_files: [mountain.json]
+graphhopper:
+  graph.flag_encoders: bike,gravel,mountain
+  graph.location: graph-cache
+  
+  # Enhanced data sources for better routing
+  datareader.file: montana-latest.osm.pbf
+  datareader.date_range_parser_day: yyyy-MM-dd
+  
+  # Improved graph preprocessing
+  graph.encoded_values: road_class,road_class_link,road_environment,max_speed,road_access,surface,smoothness,bike_network,hike_rating
+  prepare.min_network_size: 200
+  prepare.min_one_way_network_size: 200
+  
+  # Routing engine settings
+  routing.ch.disabling_allowed: true
+  routing.lm.disabling_allowed: true
+  
+  # Web interface settings
+  web.change_graph.enabled: false
+  
+  # Strict surface and road class blocking for bike profile
+  profiles:
+    - name: bike
+      vehicle: bike
+      weighting: custom
+      custom_model_files: [bike.json]
+      
+    - name: gravel
+      vehicle: bike
+      weighting: custom
+      custom_model_files: [gravel.json]
+      
+    - name: mountain
+      vehicle: bike
+      weighting: custom
+      custom_model_files: [mountain.json]
 
 # Enhanced server settings
-server.application_connectors:
-  - type: http
-    port: 8989
-    bind_host: 0.0.0.0
-
-server.request_logging:
-  appenders:
-    - type: console
+server:
+  applicationConnectors:
+    - type: http
+      port: 8989
+      bindHost: 0.0.0.0
+  requestLog:
+    appenders:
+      - type: console
