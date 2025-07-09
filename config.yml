@@ -40,10 +40,10 @@ graphhopper:
 
 # Enhanced server settings
 server:
-  applicationConnectors:
+  application_connectors:
     - type: http
       port: 8989
-      bindHost: 0.0.0.0
-  requestLog:
+      bind_host: 0.0.0.0
+  request_log:
     appenders:
       - type: console
