@@ -4,6 +4,8 @@
 graphhopper:
   graph.vehicles: bike
   graph.location: graph-cache
+  graph.elevation.provider: srtm
+  graph.elevation.cache_dir: elevation-cache
   
   # Enhanced data sources for better routing
   datareader.file: montana-latest.osm.pbf
