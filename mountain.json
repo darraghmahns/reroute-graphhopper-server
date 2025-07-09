@@ -92,11 +92,11 @@
     },
     {
       "if": "road_class == TRACK",
-      "multiply_by": "1.6"
+      "multiply_by": "1.8"
     },
     {
       "if": "road_class == PATH",
-      "multiply_by": "1.7"
+      "multiply_by": "2.0"
     },
     {
       "if": "surface == DIRT",
