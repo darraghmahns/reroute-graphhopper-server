@@ -2,7 +2,7 @@
 # Optimized for highway-free, scenic cycling with strict surface controls
 
 graphhopper:
-  graph.vehicles: bike,gravel,mountain
+  graph.vehicles: bike
   graph.location: graph-cache
   
   # Enhanced data sources for better routing
@@ -20,7 +20,7 @@ graphhopper:
   # Web interface settings
   web.change_graph.enabled: false
   
-  # Strict surface and road class blocking for bike profile
+  # Different routing profiles using bike vehicle with custom models
   profiles:
     - name: bike
       vehicle: bike
