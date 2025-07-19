@@ -33,5 +33,5 @@ EXPOSE 8989
 HEALTHCHECK --interval=30s --timeout=10s --start-period=120s --retries=3 \
   CMD curl -f http://localhost:8989/info || exit 1
 
-# Start GraphHopper with proper server configuration
-CMD ["java", "-Xmx1536m", "-Ddw.server.applicationConnectors[0].port=8989", "-jar", "graphhopper-web-8.0.jar", "server", "config/config.yml"]
+# Start GraphHopper - port is already configured in config.yml
+CMD ["java", "-Xmx1536m", "-jar", "graphhopper-web-8.0.jar", "server", "config/config.yml"]
