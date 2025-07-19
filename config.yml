@@ -40,10 +40,19 @@ graphhopper:
 
 # Enhanced server settings
 server:
-  application_connectors:
+  type: default
+  applicationConnectors:
     - type: http
       port: 8989
-      bind_host: 0.0.0.0
-  request_log:
+      bindHost: 0.0.0.0
+  adminConnectors:
+    - type: http
+      port: 8990
+      bindHost: 0.0.0.0
+  requestLog:
     appenders:
       - type: console
+
+# Enable routing API
+graphhopper.routing.enabled: true
+graphhopper.web.enabled: true

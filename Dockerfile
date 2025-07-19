@@ -29,9 +29,9 @@ COPY mountain.json /app/
 # Expose port
 EXPOSE 8989
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
-  CMD curl -f http://localhost:8989/health || exit 1
+# Health check - use info endpoint which is available on GraphHopper
+HEALTHCHECK --interval=30s --timeout=10s --start-period=120s --retries=3 \
+  CMD curl -f http://localhost:8989/info || exit 1
 
-# Start GraphHopper
-CMD ["java", "-Xmx1536m", "-jar", "graphhopper-web-8.0.jar", "server", "config/config.yml"]
+# Start GraphHopper with proper server configuration
+CMD ["java", "-Xmx1536m", "-Ddw.server.applicationConnectors[0].port=8989", "-jar", "graphhopper-web-8.0.jar", "server", "config/config.yml"]
