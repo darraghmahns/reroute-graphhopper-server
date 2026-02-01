@@ -62,7 +62,7 @@ server:
   # Gzip compression
   gzip:
     enabled: true
-    minimum_entity_size: 1024
+    minimum_entity_size: 1KiB
     buffer_size: 32KiB
     
   # Thread configuration for Cloud Run
