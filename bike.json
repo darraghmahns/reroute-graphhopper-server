@@ -133,6 +133,14 @@
       "multiply_by": "1.6"
     },
     {
+      "if": "road_class == UNCLASSIFIED",
+      "multiply_by": "0.01"
+    },
+    {
+      "if": "road_class == CYCLEWAY && surface != ASPHALT && surface != CONCRETE && surface != PAVED",
+      "multiply_by": "0"
+    },
+    {
       "if": "bike_network == INTERNATIONAL || bike_network == NATIONAL || bike_network == REGIONAL",
       "multiply_by": "1.4"
     },
@@ -265,6 +273,14 @@
     {
       "if": "road_class == CYCLEWAY",
       "multiply_by": "2.0"
+    },
+    {
+      "if": "road_class == UNCLASSIFIED",
+      "multiply_by": "0.01"
+    },
+    {
+      "if": "road_class == CYCLEWAY && surface != ASPHALT && surface != CONCRETE && surface != PAVED",
+      "multiply_by": "0"
     },
     {
       "if": "road_class == RESIDENTIAL && (surface == ASPHALT || surface == CONCRETE || surface == PAVED)",
